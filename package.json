@@ -1,0 +1,39 @@
+{
+  "name": "countries",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.10.1",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-fast-compare": "^2.0.4",
+    "react-google-charts": "^3.0.15",
+    "react-loadable": "^5.5.0",
+    "react-router": "^5.1.2",
+    "react-scripts": "^3.3.0",
+    "rxjs": "^6.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
