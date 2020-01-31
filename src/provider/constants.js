@@ -46,8 +46,8 @@ export const DEFAULT_TABLE_OPTIONS =  {
     showRowNumber: false,
     enableInteractivity: true,
     page: 'enable',
-    pageSize: 10,
-    pagingButtons: 'auto' ,
+    pageSize: 20,
+    pagingButtons: 20 ,
     width: '100%',
 };
 

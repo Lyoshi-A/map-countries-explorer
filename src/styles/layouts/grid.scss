@@ -164,3 +164,57 @@
     }
   }
 }
+
+#reactgooglegraph-1 path { cursor: pointer; }
+#reactgooglegraph-2 .google-visualization-table-tr-even {
+    cursor: pointer;
+    font-size: 12px!important;
+    line-height: 1.45em;
+    font-weight:200;
+}
+#reactgooglegraph-2 .google-visualization-table-tr-odd {
+    cursor: pointer;
+    font-size: 12px!important;
+    font-size: 12px!important;
+    line-height: 1.45em;
+    font-weight:200;
+}
+.google-visualization-table-div-page [role="button"] {
+  font-size: 14px!important;
+}
+
+.google-visualization-table-div-page {
+    display: flex!important;
+    justify-content: flex-end;
+    flex-direction: row;
+    line-height: 1em!important;
+    padding: 4px!important;
+    height: 25px!important;
+}
+
+.goog-custom-button-collapse-right {
+    order: 1;
+}
+
+.goog-custom-button-collapse-left {
+    order: 3;
+}
+.google-visualization-table-page-numbers {
+    order: 2;
+      & .current {
+          background: transparent!important;
+          border-style: none!important;
+          font-weight: 600!important;
+      }
+      & .google-visualization-table-page-number {
+          display: inline!important;
+          border: 0!important;
+          font-size: 14px!important;
+          font-weight: 200;
+      }
+      & .gradient {
+      }
+}
+
+
+

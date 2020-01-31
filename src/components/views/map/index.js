@@ -20,19 +20,25 @@ const DrawMap = ({loader, args:{params}}) => {
         chartOptions: DEFAULT_CHART_OPTIONS,
     })
 
+
+
     const events = [
         {
             eventName: "select",
-            callback({ chartWrapper }) {
+            callback({ chartWrapper, google }) {
                 const selection = chartWrapper.getChart().getSelection();
                 const query = dataSource.current[selection[0].row + 1][0];
                 if (selection.length) {
-                    if (!params.region)
-                       window.location.replace(`/region/${query.f.toLowerCase()}`)
-                    else
-                       window.location.replace(`/country/${query.v.toUpperCase()}`)
+                    window.history.pushState({},'', window.location.href)
+                    if (!params.region) {
+                        window.location.replace(`/region/${query.f.toLowerCase()}`)
+                    }
+                    else {
+                        window.location.replace(`/country/${query.v.toUpperCase()}`)
+                    }
                 }
-            }
+            },
+
         },
     ];
 
@@ -55,7 +61,7 @@ const DrawMap = ({loader, args:{params}}) => {
         return () => {
             subject.unsubscribe();
         }
-    },[]) 
+    },[])
 
     return <div className="container-main">
         <Chart
@@ -71,6 +77,20 @@ const DrawMap = ({loader, args:{params}}) => {
             data={state.data}
             options={DEFAULT_TABLE_OPTIONS}
             chartEvents={events}
+            chartPackages={['table', 'controls']}
+            controls={[
+                {
+                    controlType: 'StringFilter',
+                    options: {
+                        filterColumnIndex: 0,
+                        useFormattedValue: true,
+                        matchType: 'prefix' | 'exact',
+                        ui: {
+                            label: 'Search by name: ',
+                        },
+                    },
+                },
+            ]}
         />
     </div>
 }
