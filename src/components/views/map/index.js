@@ -26,15 +26,17 @@ const DrawMap = ({loader, args:{params}}) => {
         {
             eventName: "select",
             callback({ chartWrapper, google }) {
+                const dt = chartWrapper.getDataTable()
                 const selection = chartWrapper.getChart().getSelection();
-                const query = dataSource.current[selection[0].row + 1][0];
                 if (selection.length) {
                     window.history.pushState({},'', window.location.href)
                     if (!params.region) {
-                        window.location.replace(`/region/${query.f.toLowerCase()}`)
+                        const query = dt.getFormattedValue(selection[0].row, 0);
+                        window.location.replace(`/region/${query.toLowerCase()}`)
                     }
                     else {
-                        window.location.replace(`/country/${query.v.toUpperCase()}`)
+                        const query = dt.getValue(selection[0].row, 0);
+                        window.location.replace(`/country/${query.toUpperCase()}`)
                     }
                 }
             },
