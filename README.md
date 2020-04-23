@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## World countries explorer - react, Hooks, RxJs, REST Countries API, google chart API
 
+## Demo http://45.55.61.142:8082/
+
 ## Available Scripts
 
 In the project directory, you can run:

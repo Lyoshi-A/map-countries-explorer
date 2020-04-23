@@ -20,8 +20,6 @@ const DrawMap = ({loader, args:{params}}) => {
         chartOptions: DEFAULT_CHART_OPTIONS,
     })
 
-
-
     const events = [
         {
             eventName: "select",
@@ -63,7 +61,7 @@ const DrawMap = ({loader, args:{params}}) => {
         return () => {
             subject.unsubscribe();
         }
-    },[])
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
 
     return <div className="container-main">
         <Chart

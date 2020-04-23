@@ -26,7 +26,7 @@ const ViewBlock = ({loader, args:{params:{country}}}) => {
         return () => {
             subject.unsubscribe();
         }
-    },[])
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
 
     return <div className="container-details">
         <div>
